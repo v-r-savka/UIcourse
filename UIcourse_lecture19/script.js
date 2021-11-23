@@ -4,12 +4,12 @@ function makeClass(...properties) {
    let count = 0;
    return class newClass {
       constructor(...values) {
-         for (let arg of properties) {
-            this[arg] = values[count];
+         properties.forEach(prop => {
+            this[prop] = values[count];
             count++;
-         }
+         });
       }
-   }
+   };
 }
 
 const Animal = makeClass('name', 'species', 'age', 'health', 'weight', 'color');

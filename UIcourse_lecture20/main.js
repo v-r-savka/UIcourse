@@ -1,10 +1,14 @@
 'use strict';
 
+class God {
+   creation(...name) {
+      return [new Man(name[0]), new Woman(name[1])];
+   }
+}
+
 
 class Human {
-   creation(...name) {
-      return [new Man(name[0]), new Woman(name[1])]
-   }
+
 }
 
 class Man extends Human {
@@ -21,9 +25,9 @@ class Woman extends Human {
    }
 }
 
-let humanity = new Human;
+let god = new God();
 
-let adamAndEve = humanity.creation('Adam', 'Eve');
+let firstPair = god.creation('Adam', 'Eve');
 
-console.log(adamAndEve);
+console.log(firstPair);
 

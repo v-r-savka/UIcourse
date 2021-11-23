@@ -13,7 +13,7 @@ let strings = ['a', 'b', 'c'];
 let stringsWithNumber = giveLineNumber(strings);
 
 stringsWithNumber.forEach(str => {
-   alert(str)
+   alert(str);
 });
 
 

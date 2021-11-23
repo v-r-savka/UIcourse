@@ -12,13 +12,13 @@ let sortMixin = {
       } else if (dir === 'desc') {
          this.sort((a, b) => b - a).filter(num => {
             sortedArr.push(num);
-         })
+         });
          return sortedArr;
       } else return false;
    }
-}
+};
 
-Object.assign(Array.prototype, sortMixin)
+Object.assign(Array.prototype, sortMixin);
 let numbers = [1, 6, 4, 5];
 
 let sortedNumbers = numbers.sortReloaded();

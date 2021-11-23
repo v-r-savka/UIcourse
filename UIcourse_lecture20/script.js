@@ -4,9 +4,9 @@
 
 class Cuboid {
    constructor(length, width, height) {
-      this.length = length
-      this.width = width
-      this.height = height
+      this.length = length;
+      this.width = width;
+      this.height = height;
    }
 
    getSurfaceArea() {
@@ -40,4 +40,3 @@ alert(paralelogram.getVolume());
 
 alert(cube.getSurfaceArea());
 alert(cube.getVolume());
-
