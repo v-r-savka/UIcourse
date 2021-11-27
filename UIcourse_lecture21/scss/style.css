@@ -1,0 +1,18 @@
+.slider {
+  width: 200px;
+  height: 10px;
+  margin: 100px;
+  background-color: lavender;
+  left: 100px;
+  border-radius: 5px;
+}
+
+.slider__thumb {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: -5px;
+  background-color: lawngreen;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=style.css.map */
