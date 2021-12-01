@@ -43,7 +43,6 @@ function showErrMessage(msg) {
 
 
 function createUserCard(githubUser) {
-   console.log(githubUser);
 
    const userCard = `
    <div class="card__avatar">
@@ -69,28 +68,21 @@ function createUserCard(githubUser) {
 async function getRepos(userName) {
    try {
       const responseRepos = await fetch(url + userName + `/repos?sort=created`);
-      console.log(responseRepos);
       const repos = await responseRepos.json();
-      console.log(repos);
       addReposToCard(repos);
    } catch (error) {
-      console.log(e);
       showErrMessage(e.message)
    }
 }
 
 function addReposToCard(repos) {
-   console.log(repos)
    const reposList = document.getElementById('list')
    repos.slice(0, 5).forEach(repo => {
       const li = document.createElement('li');
-      console.log(repo);
-      console.dir(repo)
       reposList.append(li);
-      console.log(li);
       const repoLink = document.createElement('a');
       li.append(repoLink);
-      repoLink.href = `https://github.com/${repo.full_name}`;
+      repoLink.href = repo.html_url;
       repoLink.classList.add("card__link");
       repoLink.target = '_blank';
       repoLink.innerText = repo.name;
